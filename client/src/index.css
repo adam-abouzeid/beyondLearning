@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600");
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Rajdhani", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #707070;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+.flex {
+  display: flex;
+}
+
+.btf {
+  z-index: 999;
+}
+
+.side-margin {
+  margin-left: 140px;
+  margin-right: 140px;
+}
+
+.section-title {
+  font-size: 1.4rem;
+}
+
+.section-title-fill {
+  font-size: 1.4rem;
+}
+
+.section-header {
+  letter-spacing: 1.5px;
+  justify-content: space-between;
+  margin: 0 140px 30px;
+  padding: 15px 0;
+  border-bottom: 1px solid #000;
+}
+
+.section-header-fill {
+  letter-spacing: 1.5px;
+  justify-content: space-between;
+  margin: 0 140px 30px;
+  background-color: #f7f7f7;
+  padding: 15px 20px;
+}
+
+.bottom {
+  align-self: flex-end;
+}
+
+.top {
+  align-self: flex-start;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.text-overlay {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.623), transparent);
+}
+
+:root {
+  --gray-background: #eceff1;
+}
+
+/*
+for the card component to have the card size the same regardless how long the title is
+.card-title {
+  height: 2.5rem;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+*/

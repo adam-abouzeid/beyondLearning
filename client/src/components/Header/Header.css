@@ -1,0 +1,192 @@
+.navbar {
+  position: relative;
+
+  padding: 15px 100px;
+  display: flex;
+}
+
+.navbar-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  text-align: center;
+  align-self: center;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar-logo-link {
+  text-decoration: none;
+  color: #000;
+}
+.navbar-logo {
+  margin: 0 0 0 60px;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: "Orbitron", sans-serif;
+}
+.navbar-logo img {
+  height: 60px;
+  width: 80px;
+}
+.nav-links {
+  letter-spacing: 1px;
+  gap: 1.2rem;
+  font-size: 16px;
+  margin-left: 7rem;
+  list-style-type: none;
+  display: flex;
+
+  /* This would lower the row of links to the level of the search box align-self: flex-end;  */
+}
+.nav-links li :hover {
+  border-bottom: 2px solid #000;
+}
+
+li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+}
+.nav-actions {
+  gap: 2rem;
+  display: flex;
+  margin-right: 6rem;
+}
+.nav-search-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--gray-background);
+  padding-right: 10px;
+}
+.nav-search-box input {
+  border: none;
+  outline: none;
+  padding: 13px 10px;
+  font-size: 16px;
+  margin-left: 0;
+  width: 24rem;
+  background-color: transparent;
+}
+.nav-search-box ::placeholder {
+  color: #000000;
+}
+.nav-icon {
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+.active-navlink {
+  border-bottom: 2px solid #000;
+}
+.close-nav-mobile {
+  display: none;
+}
+.nav-icon-mobile {
+  display: none;
+}
+@media (max-width: 500px) {
+  .navbar {
+    padding: 15px 0 0 0;
+    text-align: center;
+  }
+  .navbar-container {
+    padding: 0 0 10px;
+  }
+  .close-nav-mobile {
+    border: 1px solid black;
+    background-color: white;
+
+    padding: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+
+    cursor: pointer;
+  }
+  .active-navlink {
+    border: none;
+  }
+  .nav-store-link-image {
+    width: 150px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-store-links {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    z-index: 999;
+    top: 0px;
+    background-color: #fff;
+
+    width: 0px;
+    height: 100vh;
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    & a {
+      width: 100%;
+    }
+  }
+
+  .nav-links.active {
+    padding: 20px;
+
+    width: 90%;
+    position: fixed;
+  }
+
+  .nav-links li {
+    margin-right: unset;
+    margin-top: 22px;
+    border: 1px solid black;
+    padding: 10px;
+  }
+  .nav-links li:hover {
+    color: white;
+    background-color: black;
+    & a {
+      color: white;
+    }
+  }
+
+  .navbar-logo {
+    margin: 0 0 0 10px;
+    font-size: 1.5rem;
+  }
+
+  .nav-search-box {
+    display: none;
+  }
+
+  .nav-actions {
+    display: flex;
+    margin-right: 1rem;
+  }
+
+  .nav-icon-mobile {
+    display: block;
+    color: #000000;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  .search-mobile {
+    display: block;
+  }
+}

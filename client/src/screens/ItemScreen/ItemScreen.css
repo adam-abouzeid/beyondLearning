@@ -1,0 +1,16 @@
+.itemPage-container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px;
+}
+.itemPage-image-container {
+  width: 40%;
+}
+.itemPage-image-container img {
+  width: 500px;
+}
+.itemPage-details-container {
+  width: 40%;
+}

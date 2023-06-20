@@ -1,0 +1,26 @@
+.button {
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid #fff;
+
+  font-size: 20px;
+
+  cursor: pointer;
+  transition: 0.3s;
+
+  color: white;
+}
+.button:hover {
+  background-color: #fff;
+  color: black;
+  border: none;
+}
+
+@media only screen and (max-width: 500px) {
+  .button {
+    font-size: 0.8rem;
+  }
+}
