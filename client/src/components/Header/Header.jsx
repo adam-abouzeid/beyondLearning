@@ -59,7 +59,7 @@ const Header = () => {
                 className={({ isActive }) => (isActive ? "active-navlink" : "")}
                 to="/products"
               >
-                Inventory
+                Storage Inventory
               </NavLink>
             </li>
             <li>
