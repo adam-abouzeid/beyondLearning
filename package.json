@@ -4,6 +4,9 @@
   "description": "Beyond Learning Platform",
   "main": "server.js",
   "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "start": "node server/server.js",
     "server": "nodemon server/server.js",
