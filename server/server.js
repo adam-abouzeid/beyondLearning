@@ -9,7 +9,7 @@ import userRoutes from "./routes/userRoutes.js";
 import orderRoutes from "./routes/orderRoutes.js";
 import uploadRoutes from "./routes/uploadRoutes.js";
 dotenv.config();
-import connectDB from "./config/db.js";
+import connectDB from "./config/DB.js";
 const port = process.env.PORT;
 
 const app = express();
