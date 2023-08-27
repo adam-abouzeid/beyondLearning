@@ -91,6 +91,13 @@ li {
 .nav-icon-mobile {
   display: none;
 }
+.cart-badge {
+  margin-left: 5px;
+  border-radius: 100%;
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+}
 @media (max-width: 500px) {
   .navbar {
     padding: 15px 0 0 0;

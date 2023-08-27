@@ -1,7 +1,10 @@
 .footer {
   background-color: #000;
-  height: 70vh;
-  padding: 10px 90px 10px 100px;
+  /* height: 70vh; */
+  /* padding: 10px 90px 10px 100px; */
+  padding: 10px;
+  width: 100%;
+  text-align: center;
   color: #ddd;
 }
 

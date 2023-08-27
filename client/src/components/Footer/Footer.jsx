@@ -4,13 +4,15 @@ import { AiOutlineInstagram } from "react-icons/ai";
 import { TbBrandTiktok } from "react-icons/tb";
 import { SlSocialFacebook } from "react-icons/sl";
 import { TfiTwitter } from "react-icons/tfi";
-
+import logo from "../../assets/beyondlearning-logo.png";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
     <div className="footer">
-      <div className="header-footer">
-        <h4 className="footer-logo">OCTANE</h4>
+      Developed and Designed by Adam Abou Zeid - All Rights Reserved. &copy;{" "}
+      {currentYear}
+      {/* <div className="header-footer">
+        <img className="footer-logo" src={logo} alt="" />
       </div>
       <hr />
       <div className="footer-links flex">
@@ -112,7 +114,7 @@ const Footer = () => {
           <Link>Privacy Policy</Link>
           <Link>Terms of Service</Link>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

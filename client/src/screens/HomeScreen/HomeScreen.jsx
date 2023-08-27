@@ -1,12 +1,15 @@
 import Landing from "./components/Landing/Landing";
-import { useEffect, useState } from "react";
+
 import "./HomeScreen.css";
-import axios from "axios";
+import { useGetProductsQuery } from "../../slices/productsApiSlice";
 import Card from "../../components/Card/Card";
 import AboutUs from "./components/AboutUs/AboutUs";
 import OurTeam from "./components/OurTeam/OurTeam";
+import { useParams, Link } from "react-router-dom";
+import Paginate from "../../components/Paginate";
 import adam from "../../assets/adam.jpg";
 import lara from "../../assets/lara.jpg";
+import Meta from "../../components/Meta";
 const team = [
   {
     name: "Hammad",
@@ -37,39 +40,56 @@ const team = [
   },
   {
     name: "Youssef",
-    position: "Junior Assistan 1",
+    position: "Junior Assistant 1",
     image: "https://picsum.photos/200/300",
   },
   {
     name: "Adam",
-    position: "Junior Assistan 1",
+    position: "Junior Assistant 1",
     image: adam,
   },
   {
     name: "Moustapha",
-    position: "Junior Assistan 2",
+    position: "Junior Assistant 2",
     image: "https://picsum.photos/200/300",
   },
 ];
 const HomeScreen = () => {
-  const [items, setItems] = useState([]);
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const { data } = await axios.get("/api/items");
-      setItems(data);
-    };
-    fetchProducts();
-  }, []);
+  const { pageNumber, keyword } = useParams();
+  const { data, isLoading, error } = useGetProductsQuery({
+    keyword,
+    pageNumber,
+  });
+
   return (
     <div className="home-container">
-      <Landing />
-      {/* <div className="items">
-        {items.map((item) => (
-          <Card listing={item} key={item._id} />
-        ))}
-      </div> */}{" "}
-      <AboutUs />
-      <OurTeam team={team} />
+      {keyword && <Link to="/">go back</Link>}
+      {isLoading && <div className="loading">Loading...</div>}
+      {error ? (
+        <div>{error?.data?.message || error.error}</div>
+      ) : (
+        <>
+          {/* <Landing /> */}
+          <Meta title="Home Screen" />
+          <div className="products-section">
+            {data?.items?.map((product) => (
+              <h1
+                style={{ color: "red", margin: 20, fontSize: 13 }}
+                key={product._id}
+              >
+                {product.name}
+              </h1>
+            ))}
+          </div>
+          {/* <AboutUs /> */}
+          {/* <OurTeam team={team} /> */}
+          <Paginate
+            page={pageNumber}
+            pages={data?.pages}
+            keyword={keyword ? keyword : ""}
+          />
+        </>
+      )}
     </div>
   );
 };
