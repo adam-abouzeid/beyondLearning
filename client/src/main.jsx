@@ -29,17 +29,16 @@ import { HelmetProvider } from "react-helmet-async";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route index={true} path="/" element={<HomeScreen />} />
-      <Route path="/search/:keyword" element={<HomeScreen />} />
-      <Route path="/page/:pageNumber" element={<HomeScreen />} />
-      <Route
-        path="/search/:keyword/page/:pageNumber"
-        element={<HomeScreen />}
-      />
-
-      <Route path="/login" element={<LoginScreen />} />
+      <Route index={true} path="/login" element={<LoginScreen />} />
       <Route path="/register" element={<RegisterScreen />} />
       <Route path="" element={<PrivateRoute />}>
+        <Route path="/" element={<HomeScreen />} />
+        <Route path="/search/:keyword" element={<HomeScreen />} />
+        <Route path="/page/:pageNumber" element={<HomeScreen />} />
+        <Route
+          path="/search/:keyword/page/:pageNumber"
+          element={<HomeScreen />}
+        />
         <Route path="/products/:id" element={<ItemScreen />} />
         <Route path="/products" element={<ProductScreen />} />
         <Route path="/basket" element={<BasketScreen />} />

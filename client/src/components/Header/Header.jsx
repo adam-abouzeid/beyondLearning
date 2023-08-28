@@ -83,12 +83,13 @@ const Header = () => {
                 )}
               </NavLink>
             </li>
-            {userInfo ? (
+            {userInfo && (
               <div className="options">
                 <button onClick={logoutHandler}>Logout</button>
                 <Link to="/profile">Profile</Link>
               </div>
-            ) : (
+            )}
+            {/* ) : (
               <li onClick={closeNavMenu}>
                 <NavLink
                   className={({ isActive }) =>
@@ -99,7 +100,8 @@ const Header = () => {
                   Sign Up/Log In
                 </NavLink>
               </li>
-            )}
+            ) */}
+
             {userInfo && userInfo.isAdmin && (
               <div className="admin-links">
                 Admin Only:

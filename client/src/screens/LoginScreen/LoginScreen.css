@@ -1,9 +1,56 @@
-.form-entry {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
+.login-form {
+  width: 50%;
+  padding: 50px 10%;
+  height: 100%;
+}
+.login-layout {
+  height: 100vh;
+}
+.auth-header {
+  text-align: start;
   width: 100%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+}
+
+.login-boarding {
+  width: 50%;
+  background-position-y: 70%;
+}
+
+.login-button {
+  width: 100%;
+  margin-top: 30px;
+}
+
+.input-container {
+  align-items: flex-start;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.login-header {
+  width: 100%;
+  align-self: start;
+}
+.checkbox-password {
+  width: 100%;
+  text-align: end;
+  margin-top: 2px;
+}
+.password-labels {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.forgot-password {
+  font-size: 0.8rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login-input {
+  height: 50px;
+  width: 100%;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 15px;
 }
